@@ -1,8 +1,8 @@
 import logo from '../assets/header-logo.png'
 
 function Header({code, setCode, setSongs, accessToken, setAccessToken}) {
-    const CLIENT_ID = "56f5a961a7f1454ea689c6c5d8fc56ce";
-    const REDIRECT_URI = "http://localhost:5173/";
+    const CLIENT_ID = process.env.CLIENT_ID;
+    const REDIRECT_URI = process.env.REDIRECT_URI;
     const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
     const RESPONSE_TYPE = "code";
     const SCOPE = "playlist-read-private, user-top-read";
