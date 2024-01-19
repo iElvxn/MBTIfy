@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import logo from '../assets/header-logo.png'
 
 function Header({code, setCode, setSongs, accessToken, setAccessToken}) {
     const CLIENT_ID = "56f5a961a7f1454ea689c6c5d8fc56ce";
@@ -15,7 +15,7 @@ function Header({code, setCode, setSongs, accessToken, setAccessToken}) {
 
     return (
         <div className="header-container">
-            <img className="header-logo" src="./src/assets/header-logo.png"></img>
+            <img className="header-logo" src={logo}></img>
             {!code || !accessToken ? 
                 <a className="login-btn" onClick href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}`}>See my MBTI</a>
                 : 
