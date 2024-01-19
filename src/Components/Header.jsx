@@ -15,7 +15,7 @@ function Header({code, setCode, setSongs, accessToken, setAccessToken}) {
 
     return (
         <div className="header-container">
-            <img className="header-logo" src=".\src\assets\header-logo.png"></img>
+            <img className="header-logo" src="./src/assets/header-logo.png"></img>
             {!code || !accessToken ? 
                 <a className="login-btn" onClick href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}`}>See my MBTI</a>
                 : 
