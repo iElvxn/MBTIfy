@@ -24,6 +24,7 @@ button, a {
     align-items: center;
     justify-content: space-around;
     padding: 12px;
+    width: calc(100% - 24px);
 }
 
 .header-logo {
@@ -98,4 +99,13 @@ button, a {
 .soundwave {
     rotate: 45deg;
     width: 75%;
+}
+
+@media only screen and (max-device-width: 700px){
+    .left-container {
+        width: 100%;
+    }
+    .right-container {
+        display: none;
+    }
 }
